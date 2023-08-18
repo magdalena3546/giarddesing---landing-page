@@ -5,6 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -12098,5 +12099,188 @@ textarea.form-control-lg {
   }
   .d-print-none {
     display: none !important;
+  }
+}
+:root {
+  --bs-link-color: $font_color;
+  color: #111;
+  overflow-x: hidden;
+  --bs-body-font-size: 1em;
+  --bs-font-sans-serif: $font_text;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  height: 200vh;
+}
+
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.header .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
+.header .navigation.fixed {
+  background-color: #fff;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  border-bottom: 1px solid #1B5B31;
+}
+.header nav {
+  position: relative;
+}
+.header nav .dropdown-menu {
+  border: none;
+}
+.header nav .dropdown-menu .dropdown-item {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.header nav .dropdown-menu .dropdown-item:hover, .header nav .dropdown-menu .dropdown-item:focus {
+  background-color: transparent;
+}
+.header nav .dropdown-menu .dropdown-item:hover {
+  color: #1B5B31;
+  margin-left: 10px;
+  border-left: 1px solid #1B5B31;
+}
+.header nav button {
+  width: 20px;
+  height: 15px;
+  position: relative;
+  border: none;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  border-radius: 0;
+}
+.header nav button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.header nav button span {
+  display: block;
+  left: 0;
+  position: absolute;
+  background-color: #1B5B31;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.header nav button span:nth-child(1) {
+  top: 0;
+}
+.header nav button span:nth-child(2) {
+  top: 6px;
+}
+.header nav button span:nth-child(3) {
+  top: 12px;
+}
+.header nav button.open span:nth-child(1) {
+  top: 6px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.header nav button.open span:nth-child(2) {
+  opacity: 0;
+  left: -20px;
+}
+.header nav button.open span:nth-child(3) {
+  top: 6px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+.header form {
+  position: absolute;
+  padding: 0.5rem 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.header form .inputSearch {
+  position: absolute;
+  outline: none;
+  border: none;
+  caret-color: #1B5B31;
+  border-bottom: 1px solid #1B5B31;
+  background-color: #fff;
+  width: 100%;
+  left: 200%;
+  font-size: 1.25em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header form .inputSearch.active {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  left: 0;
+}
+.header form .inputSearch.active ~ .closeBtn {
+  display: block;
+}
+.header form .inputSearch.active ~ .searchBtn {
+  display: none;
+}
+.header form .closeBtn, .header form .searchBtn {
+  font-size: 1.25rem;
+  position: absolute;
+  right: 15%;
+  padding: 0.3125rem 0;
+}
+.header form .closeBtn {
+  display: none;
+  right: 5%;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    --bs-navbar-nav-link-padding-x: 1.5rem;
+  }
+  .navbar .nav-link:hover {
+    color: #1B5B31;
+  }
+  .navbar-collapse {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .header form .searchBtn, .header form .closeBtn {
+    right: 0%;
+    margin-left: 2%;
+    -webkit-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+  }
+  .header form .searchBtn:hover, .header form .closeBtn:hover {
+    color: #1B5B31;
   }
 }/*# sourceMappingURL=style.css.map */
