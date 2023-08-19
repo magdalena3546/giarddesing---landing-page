@@ -13,6 +13,21 @@ body, html{
 body {
     font-family: $font_text;
     height: 200vh;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $font_title;
+        font-weight: 500;
+    }
+   
+    button {
+        border: none;
+        
+        &.btn {
+            border: 1px solid;
+            width: 15em;
+            padding: 10px 5px;
+            border-radius: 30px;
+        }
+    }
 }
 
 input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
@@ -21,3 +36,37 @@ input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
+.row {
+    --bs-gutter-x: 0;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+@media (orientation: landscape) {
+    body {
+        button {
+            &.btn {
+                padding: 7px 3px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        button {
+            &.btn {
+                transition: .3s;
+                padding: 15px 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    p {
+        font-size: 1.2em;
+    }
+}
