@@ -1,0 +1,86 @@
+.offer {
+    background-color: $bgc_section_grey;
+    padding: 8% 0 5%;
+    .text {
+        padding: 0 3%;
+    }
+    .card {
+        border: none;
+        border-radius: 30px;
+        padding: 2%;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        .image {
+            padding: 3% 0;
+        }
+        h2 {
+            padding: 0 5%;
+        }
+        a {
+            color: $bgc_elm;
+            padding-bottom: 2%;
+            border-bottom: 1px solid $bgc_elm;
+            cursor: pointer;
+        }
+    }
+   
+}
+
+@media (min-width: 1024px) {
+    .offer {
+        padding: 7.5rem 0 8rem;
+        .text {
+            padding: 0 15% 5%;
+            p {
+                padding: 2% 20% 0 0;
+            }
+        }
+        .card {
+            padding: 3% 1%;
+            h3 {
+                transform: translateY(40px);
+                transition: .5s;
+            }
+            .image, a {
+                transition: .5s;
+            }
+            a {
+                overflow: hidden;
+                .icon {
+                    transition: .5s;
+                    display: inline-block;
+                    // transform: translateX(-17px);
+                }
+                &:hover .icon{
+                    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            &:hover h3{
+                transform: translateY(0);
+                color: $bgc_elm;
+            }
+            &:hover .image {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }

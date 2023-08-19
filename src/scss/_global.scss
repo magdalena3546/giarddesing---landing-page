@@ -12,10 +12,22 @@ body, html{
 
 body {
     font-family: $font_text;
-    height: 200vh;
     h1, h2, h3, h4, h5, h6 {
         font-family: $font_title;
         font-weight: 500;
+    }
+    h2 {
+        span {
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+    a{
+        text-decoration: none;
+        &.nav_elm {
+            color: $bgc_elm;
+            font-size: .8em;
+        }
     }
    
     button {
@@ -56,6 +68,9 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 @media (min-width: 1024px) {
     body {
+        h2 {
+            font-size: 3rem;
+        }
         button {
             &.btn {
                 transition: .3s;
