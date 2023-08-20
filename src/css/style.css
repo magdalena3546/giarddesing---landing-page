@@ -12140,6 +12140,9 @@ body button.btn {
   padding: 10px 5px;
   border-radius: 30px;
 }
+body section .text {
+  padding: 0 2%;
+}
 
 input[type=search]::-ms-clear {
   display: none;
@@ -12181,6 +12184,9 @@ input[type=search]::-webkit-search-results-decoration {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     padding: 15px 10px;
+  }
+  body section .text {
+    padding: 0 15% 5%;
   }
 }
 @media (min-width: 1920px) {
@@ -12533,9 +12539,6 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #F5F0EC;
   padding: 8% 0 5%;
 }
-.offer .text {
-  padding: 0 3%;
-}
 .offer .card {
   border: none;
   border-radius: 30px;
@@ -12559,9 +12562,6 @@ input[type=search]::-webkit-search-results-decoration {
 @media (min-width: 1024px) {
   .offer {
     padding: 7.5rem 0 8rem;
-  }
-  .offer .text {
-    padding: 0 15% 5%;
   }
   .offer .text p {
     padding: 2% 20% 0 0;
@@ -12637,5 +12637,81 @@ input[type=search]::-webkit-search-results-decoration {
   40%, 60% {
     -webkit-transform: translate3d(4px, 0, 0);
             transform: translate3d(4px, 0, 0);
+  }
+}
+.about {
+  position: relative;
+  height: 100vh;
+  background-color: #1B5B31;
+}
+.about .nav_elm {
+  color: #fff;
+}
+.about .asideLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/section_about.jpg");
+  height: 50%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.about .asideRight .content {
+  color: #fff;
+}
+.about .asideRight .content .btn {
+  color: #fff;
+}
+.about .asideRight .content .btn .icon {
+  display: inline-block;
+  padding-left: 2%;
+}
+
+@media (min-width: 768px) or (orientation: landscape) {
+  .about {
+    padding: 8% 0 5%;
+    height: auto;
+  }
+  .about .asideLeft {
+    width: 50%;
+    height: 100%;
+  }
+  .about .asideRight {
+    height: 100%;
+  }
+}
+@media (min-width: 390px) {
+  .about .content {
+    padding-bottom: 12%;
+  }
+}
+@media (min-width: 992px) {
+  .about {
+    padding: 8% 0 5%;
+  }
+}
+@media (min-width: 1024px) {
+  .about {
+    padding: 7.5rem 0 8rem;
+  }
+  .about .asideRight .content p {
+    padding: 2% 20% 0 0;
+  }
+  .about .asideRight .content .btn {
+    margin-top: 4.5rem;
+  }
+  .about .asideRight .content .btn .icon {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .about .asideRight .content .btn:hover {
+    background-color: #fff;
+    color: #1B5B31;
+  }
+  .about .asideRight .content .btn:hover .icon {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
   }
 }/*# sourceMappingURL=style.css.map */

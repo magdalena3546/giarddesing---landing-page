@@ -40,6 +40,11 @@ body {
             border-radius: 30px;
         }
     }
+    section {
+        .text {
+            padding: 0 2%;
+        }
+    }
 }
 
 input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
@@ -75,6 +80,11 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
             &.btn {
                 transition: .3s;
                 padding: 15px 10px;
+            }
+        }
+         section {
+            .text {
+                padding: 0 15% 5%;
             }
         }
     }

@@ -1,9 +1,9 @@
 .offer {
     background-color: $bgc_section_grey;
     padding: 8% 0 5%;
-    .text {
-        padding: 0 3%;
-    }
+    // .text {
+    //     padding: 0 3%;
+    // }
     .card {
         border: none;
         border-radius: 30px;
@@ -29,7 +29,6 @@
     .offer {
         padding: 7.5rem 0 8rem;
         .text {
-            padding: 0 15% 5%;
             p {
                 padding: 2% 20% 0 0;
             }
@@ -48,7 +47,6 @@
                 .icon {
                     transition: .5s;
                     display: inline-block;
-                    // transform: translateX(-17px);
                 }
                 &:hover .icon{
                     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -71,8 +69,7 @@
     10%, 90% {
       transform: translate3d(-1px, 0, 0);
     }
-    
-    20%, 80% {
+        20%, 80% {
       transform: translate3d(2px, 0, 0);
     }
   

@@ -1,0 +1,89 @@
+.about {
+    position: relative;
+    height: 100vh;
+    background-color: $bgc_elm;
+    .nav_elm {
+        color: #fff;
+    }
+    .asideLeft {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("../images/section_about.jpg");
+        height: 50%;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;     
+        background-position: 50% 50%; 
+    }
+    .asideRight {
+        .content {
+            color: #fff;
+            .btn {
+                color:#fff;
+                .icon {
+                    display: inline-block;
+                    padding-left: 2%;
+                }
+                
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) or (orientation: landscape) {
+    .about {
+        padding: 8% 0 5%;
+        height: auto;
+        .asideLeft {
+            width: 50%;
+            height: 100%;
+        }
+        .asideRight {
+            height: 100%;  
+        }
+    }
+}
+
+@media(min-width: 390px){
+    .about {
+        .content {
+            padding-bottom: 12%;
+        }
+    }
+}
+
+@media(min-width: 992px){
+    .about {
+        padding: 8% 0 5%;
+    }
+}
+
+@media(min-width: 1024px){
+    .about {
+        padding: 7.5rem 0 8rem;
+        .asideRight {
+            .content {
+                p {
+                    padding: 2% 20% 0 0;
+                }
+                .btn {
+                    margin-top: 4.5rem;
+                    .icon {
+                        transition: .5s;
+                    }
+                    &:hover {
+                        background-color: #fff;
+                        color: $bgc_elm;
+                    }
+                   
+                    &:hover .icon{
+                        transform: translateX(20px);
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
