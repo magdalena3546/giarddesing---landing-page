@@ -1,8 +1,11 @@
+// const Masonry = require("masonry-layout");
+
 const searchBtn = document.querySelector(".searchBtn");
 const closeBtn = document.querySelector(".closeBtn");
 const menuBtn = document.querySelector(".menuBtn");
 const searchBox = document.querySelector(".inputSearch");
 const navigation = document.querySelector(".navigation");
+const elm = document.querySelector(".grid");
 
 searchBtn.addEventListener("click", function () {
   searchBox.classList.add("active");
@@ -22,3 +25,10 @@ document.addEventListener("scroll", () => {
     navigation.classList.remove("fixed");
   }
 });
+
+window.onload = () => {
+  const masonry = new Masonry(elm, {
+    itemSelector: ".grid-item",
+    gutter: 10,
+  });
+};

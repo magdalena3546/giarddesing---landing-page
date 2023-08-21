@@ -1,0 +1,31 @@
+.projects {
+    background-color: $bgc_section_beige;
+    padding: 8% 5% 0;
+    .grid {
+        margin: 2% 7%;
+        
+        .grid-item {
+            width: 25vw;
+            img {
+                border-radius: 5px;
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+
+@media (max-width: 700px) and (orientation: portrait){
+    .projects {
+        .grid {
+            margin: 10%;
+            .grid-item {
+                width: 70vw;
+                background-color: $bgc_section_beige;
+                padding-bottom: 3%;
+            }
+    
+        }
+    }
+}

@@ -10,7 +10,7 @@
         top: 0;
         left: 0;
         background-image: url("../images/section_about.jpg");
-        height: 50%;
+        height: 40%;
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;     
@@ -20,6 +20,7 @@
         .content {
             color: #fff;
             .btn {
+                margin: 2% 0;
                 color:#fff;
                 .icon {
                     display: inline-block;
@@ -27,6 +28,16 @@
                 }
                 
             }
+        }
+    }
+}
+@media(min-width: 390px) and (orientation: portrait){
+    .about {
+        .asideLeft {
+            height: 50%;
+        }
+        .content {
+            padding-bottom: 12%;
         }
     }
 }
@@ -41,14 +52,6 @@
         }
         .asideRight {
             height: 100%;  
-        }
-    }
-}
-
-@media(min-width: 390px){
-    .about {
-        .content {
-            padding-bottom: 12%;
         }
     }
 }

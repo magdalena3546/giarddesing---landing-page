@@ -12652,7 +12652,7 @@ input[type=search]::-webkit-search-results-decoration {
   top: 0;
   left: 0;
   background-image: url("../images/section_about.jpg");
-  height: 50%;
+  height: 40%;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12662,6 +12662,7 @@ input[type=search]::-webkit-search-results-decoration {
   color: #fff;
 }
 .about .asideRight .content .btn {
+  margin: 2% 0;
   color: #fff;
 }
 .about .asideRight .content .btn .icon {
@@ -12669,6 +12670,14 @@ input[type=search]::-webkit-search-results-decoration {
   padding-left: 2%;
 }
 
+@media (min-width: 390px) and (orientation: portrait) {
+  .about .asideLeft {
+    height: 50%;
+  }
+  .about .content {
+    padding-bottom: 12%;
+  }
+}
 @media (min-width: 768px) or (orientation: landscape) {
   .about {
     padding: 8% 0 5%;
@@ -12680,11 +12689,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .about .asideRight {
     height: 100%;
-  }
-}
-@media (min-width: 390px) {
-  .about .content {
-    padding-bottom: 12%;
   }
 }
 @media (min-width: 992px) {
@@ -12713,5 +12717,30 @@ input[type=search]::-webkit-search-results-decoration {
   .about .asideRight .content .btn:hover .icon {
     -webkit-transform: translateX(20px);
             transform: translateX(20px);
+  }
+}
+.projects {
+  background-color: #DCC1AB;
+  padding: 8% 5% 0;
+}
+.projects .grid {
+  margin: 2% 7%;
+}
+.projects .grid .grid-item {
+  width: 25vw;
+}
+.projects .grid .grid-item img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+@media (max-width: 700px) and (orientation: portrait) {
+  .projects .grid {
+    margin: 10%;
+  }
+  .projects .grid .grid-item {
+    width: 70vw;
+    background-color: #DCC1AB;
+    padding-bottom: 3%;
   }
 }/*# sourceMappingURL=style.css.map */
