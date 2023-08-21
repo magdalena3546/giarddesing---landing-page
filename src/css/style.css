@@ -5,7 +5,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -12122,7 +12122,7 @@ body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body
 }
 body h2 span, body .h2 span {
   font-style: italic;
-  font-weight: 600;
+  font-family: "Inter", sans-serif;
 }
 body a {
   text-decoration: none;
@@ -12131,12 +12131,11 @@ body a.nav_elm {
   color: #1B5B31;
   font-size: 0.8em;
 }
-body button {
+body button, body a {
   border: none;
 }
-body button.btn {
+body button.btn, body a.btn {
   border: 1px solid;
-  width: 15em;
   padding: 10px 5px;
   border-radius: 30px;
 }
@@ -12172,7 +12171,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 @media (orientation: landscape) {
-  body button.btn {
+  body button.btn, body a.btn {
     padding: 7px 3px;
   }
 }
@@ -12180,7 +12179,7 @@ input[type=search]::-webkit-search-results-decoration {
   body h2, body .h2 {
     font-size: 3rem;
   }
-  body button.btn {
+  body button.btn, body a.btn {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     padding: 15px 10px;
@@ -12705,6 +12704,8 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .about .asideRight .content .btn {
     margin-top: 4.5rem;
+    white-space: nowrap;
+    padding: 15px 25px;
   }
   .about .asideRight .content .btn .icon {
     -webkit-transition: 0.5s;
@@ -12721,26 +12722,100 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .projects {
   background-color: #DCC1AB;
-  padding: 8% 5% 0;
+  padding: 8% 0 5%;
 }
-.projects .grid {
-  margin: 2% 7%;
-}
-.projects .grid .grid-item {
-  width: 25vw;
-}
-.projects .grid .grid-item img {
-  border-radius: 5px;
+.projects #macy-container::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 70%;
   width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  background: -webkit-gradient(linear, left bottom, left top, from(#DCC1AB), to(rgba(214, 183, 158, 0)));
+  background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0) 100%);
+}
+.projects #macy-container.no-after::after {
+  display: none;
+}
+.projects #macy-container .image.hidePhoto {
+  display: none;
+}
+.projects #macy-container .image.hidePhoto.show {
+  display: block;
+}
+.projects .buttonBox {
+  text-align: center;
+}
+.projects .buttonBox .hideProjectsBtn.hide {
+  display: none;
+}
+.projects .buttonBox .projectsBtn.hide {
+  display: none;
 }
 
-@media (max-width: 700px) and (orientation: portrait) {
-  .projects .grid {
-    margin: 10%;
+@media (min-width: 1024px) {
+  .projects {
+    padding: 8% 5% 5%;
   }
-  .projects .grid .grid-item {
-    width: 70vw;
-    background-color: #DCC1AB;
-    padding-bottom: 3%;
+  .projects .buttonBox .icon {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .projects .buttonBox .projectsBtn:hover .icon {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  .projects .buttonBox .hideProjectsBtn:hover .icon {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+.banner {
+  background-color: #fff;
+}
+.banner .container {
+  margin: 5%;
+  padding: 5%;
+  background-color: #1B5B31;
+  color: #fff;
+}
+.banner .container .leftSide .title h2, .banner .container .leftSide .title .h2 {
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -2px;
+}
+.banner .container .rightSide .text a.btn {
+  color: #1B5B31;
+  border: none;
+  background-color: #fff;
+  border: 1px solid;
+}
+
+@media (min-width: 1024px) {
+  .banner .container {
+    padding: 120px 110px;
+  }
+  .banner .container .leftSide .title h2, .banner .container .leftSide .title .h2 {
+    font-size: 40px;
+  }
+  .banner .container .rightSide .text a.btn {
+    padding: 12px 24px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .banner .container .rightSide .text a.btn:hover {
+    color: #fff;
+    background-color: #1B5B31;
+    border-color: #fff;
+  }
+  .banner .container .row {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .banner .container:hover .row {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }/*# sourceMappingURL=style.css.map */

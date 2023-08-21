@@ -19,7 +19,7 @@ body {
     h2 {
         span {
             font-style: italic;
-            font-weight: 600;
+            font-family: $font_text; 
         }
     }
     a{
@@ -30,12 +30,11 @@ body {
         }
     }
    
-    button {
+    button, a {
         border: none;
         
         &.btn {
             border: 1px solid;
-            width: 15em;
             padding: 10px 5px;
             border-radius: 30px;
         }
@@ -63,7 +62,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 @media (orientation: landscape) {
     body {
-        button {
+        button, a {
             &.btn {
                 padding: 7px 3px;
             }
@@ -76,7 +75,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
         h2 {
             font-size: 3rem;
         }
-        button {
+        button, a {
             &.btn {
                 transition: .3s;
                 padding: 15px 10px;

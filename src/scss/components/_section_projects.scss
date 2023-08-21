@@ -1,31 +1,67 @@
 .projects {
     background-color: $bgc_section_beige;
-    padding: 8% 5% 0;
-    .grid {
-        margin: 2% 7%;
+    padding: 8% 0 5%;
+    #macy-container {
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            height: 70%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            opacity: .8;
+            background: linear-gradient(360deg, #DCC1AB 0%, rgba(214, 183, 158, 0.00) 100%);
+        }
+        &.no-after::after{
+            display: none;
+        }
         
-        .grid-item {
-            width: 25vw;
-            img {
-                border-radius: 5px;
-                width: 100%;
+        .image {
+            &.hidePhoto {
+                display: none;
+                &.show {
+                    display: block;
+                }
             }
         }
 
+    }
+    .buttonBox {
+        text-align: center;
+        .hideProjectsBtn {
+            &.hide {
+                display: none;
+            }
+        }
+        .projectsBtn  {
+            
+            &.hide {
+                display: none;
+            }
+      
+        }
     }
 }
 
-
-@media (max-width: 700px) and (orientation: portrait){
+@media (min-width: 1024px) {
     .projects {
-        .grid {
-            margin: 10%;
-            .grid-item {
-                width: 70vw;
-                background-color: $bgc_section_beige;
-                padding-bottom: 3%;
+        padding: 8% 5% 5%;
+        
+        .buttonBox {
+            .icon{
+                transition: .3s;
             }
-    
+            .projectsBtn  {
+                &:hover .icon {
+                    transform: translateY(10px);
+                }
+            }
+            .hideProjectsBtn {
+                &:hover .icon {
+                    transform: translateY(-10px);
+                }
+            }
         }
-    }
+    }   
 }
