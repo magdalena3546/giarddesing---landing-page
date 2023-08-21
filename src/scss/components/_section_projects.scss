@@ -6,7 +6,7 @@
             position: absolute;
             display: block;
             content: '';
-            height: 70%;
+            height: 80%;
             width: 100%;
             bottom: 0;
             left: 0;
@@ -46,8 +46,12 @@
 
 @media (min-width: 1024px) {
     .projects {
-        padding: 8% 5% 5%;
-        
+        padding: 8% 0 5%;
+        #macy-container {
+            .image {
+                max-width: 25%;
+            }
+        }
         .buttonBox {
             .icon{
                 transition: .3s;

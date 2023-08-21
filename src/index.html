@@ -12,7 +12,7 @@
   <div>
     <header class="header">
       <div class="navigation">
-        <div class="container">
+        <div class="container-fluid">
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
@@ -26,23 +26,23 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle dropMenu" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link active dropdown-toggle dropMenu" href="#offer" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Oferta
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item dropElm" href="#">Projekty</a></li>
-                      <li><a class="dropdown-item dropElm" href="#">Wizualizacje</a></li>
-                      <li><a class="dropdown-item dropElm" href="#">Realizacje</a></li>
+                      <li><a class="dropdown-item dropElm" href="#offer">Projekty</a></li>
+                      <li><a class="dropdown-item dropElm" href="#offer">Wizualizacje</a></li>
+                      <li><a class="dropdown-item dropElm" href="#offer">Realizacje</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">O firmie</a>
+                    <a class="nav-link active" aria-current="page" href="#about">O firmie</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Realizacje</a>
+                    <a class="nav-link active" aria-current="page" href="#projects">Realizacje</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Kontakt</a>
+                    <a class="nav-link active" aria-current="page" href="#contact">Kontakt</a>
                   </li>
                 </ul>
               </div>
@@ -75,15 +75,14 @@
             </div>
             <div class="asideRight"></div>
           </div>
-
           <div class="carousel-item active row wrapper" data-bs-interval="10000">
             <div class="asideLeft col-8 d-flex">
               <div class="content d-flex">
                 <h1>Nowoczesna <br>aranżacja <br><span>Twojego ogrodu</span> </h1>
                 <p>Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. <br>Oferujemy kompleksowy zakres usług <br>z indywidualnym podejściem do każdego projektu.</p>
                 <div class="buttons">
-                  <button class="btn">Skontaktuj się z nami</button>
-                  <button class="btn">Zobacz nasze realizacje <ion-icon class="icon" name="arrow-down-outline"></ion-icon></button>
+                  <a href="#contact" class="btn">Skontaktuj się z nami</a>
+                  <a href="#projects" class="btn">Zobacz nasze realizacje <ion-icon class="icon" name="arrow-down-outline"></ion-icon></a>
                 </div>
               </div>
             </div>
@@ -103,7 +102,7 @@
     </header>
     <section class="offer container-fluid">
       <div class="row text">
-        <a class="nav_elm" href="#">Oferta</a>
+        <h6 id="offer" class="nav_elm" href="">Oferta</h6>
         <h2>Działamy <span>kompleksowo</span></h2>
         <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
       </div>
@@ -111,7 +110,7 @@
         <div class="card col-10 col-md-3 my-2">
           <div class="card-body">
             <div class="image"><img src="./images/Icon1.png"/></div>
-            <h3 class="card-title">Projekty</h3>
+            <h3 id="offer" class="card-title">Projekty</h3>
             <p class="card-text">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
             <a class="#">Dowiedz się więcej <span class="icon"><ion-icon name="arrow-forward-outline"></ion-icon></span></a>
           </div>
@@ -119,7 +118,7 @@
         <div class="card col-10 col-md-3 my-2" >
           <div class="card-body">
             <div class="image"><img src="./images/Icon2.png"/></div>
-            <h3 class="card-title">Wizualizacje</h3>
+            <h3 id="offer" class="card-title">Wizualizacje</h3>
             <p class="card-text">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
             <a class="#">Dowiedz się więcej <span class="icon"><ion-icon name="arrow-forward-outline"></ion-icon></span></a>
           </div>
@@ -127,7 +126,7 @@
         <div class="card col-10 col-md-3 my-2" >
           <div class="card-body">
             <div class="image"><img src="./images/Icon3.png"/></div>
-            <h3 class="card-title">Realizacje</h3>
+            <h3 id="offer" class="card-title">Realizacje</h3>
             <p class="card-text">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
             <a class="#">Zobacz nasze realizacje <span class="icon"><ion-icon name="arrow-forward-outline"></ion-icon></span></a>
           </div>
@@ -138,7 +137,7 @@
       <div class="row align-items-end justify-content-sm-end">
         <div class="asideRight col-sm-6">
           <div class="content text">
-            <a class="nav_elm" href="#">O firmie</a>
+            <h6 id="about" class="nav_elm">O firmie</h6>
             <h2>Tworzymy <br><span>z pasją</span></h2>
             <p>Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
             <button class="btn">Poznaj nas bliżej<span class="icon"><ion-icon name="arrow-forward-outline"></ion-icon></span></button>
@@ -148,7 +147,7 @@
     </section>
     <section class="projects">
       <div class="content text">
-        <a class="nav_elm" href="#">Realizacje</a>
+        <h6 id="projects" class="nav_elm">Realizacje</h6>
         <h2>Nasze <span>projekty</span></h2>
       </div>
       <div id="macy-container">
@@ -200,7 +199,7 @@
           </div>
           <div class="d-lg-flex justify-content-lg-between">
             <div class="links d-lg-flex">
-              <a href="#">Kontakt</a>
+              <a id="contact" href="#">Kontakt</a>
               <a href="#">Instagram</a>
               <a href="#">Facebook</a>
               <a href="#">LinkedIn</a>

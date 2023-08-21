@@ -12121,7 +12121,7 @@ body, html {
 body {
   font-family: "Inter", sans-serif;
 }
-body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body h5, body .h5, body h6, body .h6 {
+body h1, body .h1, body h2, body .h2, body h3, body .h3, body h4, body .h4, body h5, body .h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
@@ -12132,7 +12132,7 @@ body h2 span, body .h2 span {
 body a {
   text-decoration: none;
 }
-body a.nav_elm {
+body h6.nav_elm, body .nav_elm.h6 {
   color: #1B5B31;
   font-size: 0.8em;
 }
@@ -12405,10 +12405,8 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .header .wrapper .asideLeft .content h1, .header .wrapper .asideLeft .content .h1 {
   font-size: 28px;
-  margin-bottom: -24%;
 }
 .header .wrapper .asideLeft .content .buttons .btn:nth-child(1) {
-  margin-bottom: 3%;
   background-color: #1B5B31;
   border: none;
   color: #fff;
@@ -12446,7 +12444,7 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .header .wrapper .asideRight {
     height: 100%;
-    background-size: 50%;
+    background-size: 45%;
     left: 30%;
     top: 0;
   }
@@ -12462,9 +12460,6 @@ input[type=search]::-webkit-search-results-decoration {
             justify-content: flex-end;
     margin: 0 3% 3%;
   }
-  .header .wrapper .asideLeft .content h1, .header .wrapper .asideLeft .content .h1 {
-    margin-bottom: -10%;
-  }
 }
 @media ((min-width: 540px) and (orientation: portrait)) or ((min-width: 800px) and (orientation: landscape)) {
   .header .wrapper .asideLeft .content {
@@ -12472,7 +12467,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
   .header .wrapper .asideLeft .content h1, .header .wrapper .asideLeft .content .h1 {
     font-size: 2.8em;
-    margin-bottom: -15%;
   }
   .header .wrapper .asideLeft .content .buttons .btn:nth-child(1) {
     margin-bottom: 0;
@@ -12502,9 +12496,17 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 @media (min-width: 1024px) {
+  .header .wrapper .asideLeft:hover .content h1, .header .wrapper .asideLeft:hover .content .h1 {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
   .header .wrapper .asideLeft .content h1, .header .wrapper .asideLeft .content .h1 {
     font-size: 3.5em;
     letter-spacing: 1px;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   .header .wrapper .asideLeft .content h1 span, .header .wrapper .asideLeft .content .h1 span {
     font-weight: 600;
@@ -12649,9 +12651,6 @@ input[type=search]::-webkit-search-results-decoration {
   height: 100vh;
   background-color: #1B5B31;
 }
-.about .nav_elm {
-  color: #fff;
-}
 .about .asideLeft {
   position: absolute;
   top: 0;
@@ -12664,6 +12663,9 @@ input[type=search]::-webkit-search-results-decoration {
   background-position: 50% 50%;
 }
 .about .asideRight .content {
+  color: #fff;
+}
+.about .asideRight .content h6.nav_elm, .about .asideRight .content .nav_elm.h6 {
   color: #fff;
 }
 .about .asideRight .content .btn {
@@ -12734,7 +12736,7 @@ input[type=search]::-webkit-search-results-decoration {
   position: absolute;
   display: block;
   content: "";
-  height: 70%;
+  height: 80%;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -12763,7 +12765,10 @@ input[type=search]::-webkit-search-results-decoration {
 
 @media (min-width: 1024px) {
   .projects {
-    padding: 8% 5% 5%;
+    padding: 8% 0 5%;
+  }
+  .projects #macy-container .image {
+    max-width: 25%;
   }
   .projects .buttonBox .icon {
     -webkit-transition: 0.3s;

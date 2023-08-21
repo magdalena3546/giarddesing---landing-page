@@ -2,9 +2,7 @@
     position: relative;
     height: 100vh;
     background-color: $bgc_elm;
-    .nav_elm {
-        color: #fff;
-    }
+    
     .asideLeft {
         position: absolute;
         top: 0;
@@ -19,6 +17,11 @@
     .asideRight {
         .content {
             color: #fff;
+            h6 {
+                &.nav_elm {
+                    color: #fff;
+                }
+            }
             .btn {
                 margin: 2% 0;
                 color:#fff;

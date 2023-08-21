@@ -28,10 +28,9 @@ document.addEventListener("scroll", () => {
   }
 });
 
-const macy = Macy({
+const macy = new Macy({
   container: "#macy-container",
-  trueOrder: false,
-  waitForImages: false,
+
   margin: 24,
   columns: 3,
   breakAt: {
@@ -53,4 +52,9 @@ hideProjectsBtn.addEventListener("click", () => {
   hidePhotos.forEach((elm) => elm.classList.remove("show"));
   projectsBtn.classList.remove("hide");
   macy.reInit();
+});
+
+macy.runOnImageLoad(function () {
+  console.log("I only get called when all images are loaded");
+  macy.recalculate(true, true);
 });
