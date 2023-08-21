@@ -12105,12 +12105,17 @@ textarea.form-control-lg {
   --bs-link-color: $font_color;
   color: #111;
   overflow-x: hidden;
-  --bs-body-font-size: 1em;
+  --bs-body-font-size: .8em;
+  --bs-btn-font-size: .8em;
   --bs-font-sans-serif: $font_text;
 }
 
 body, html {
   overflow-x: hidden;
+}
+
+.btn {
+  --bs-btn-font-size: .8em;
 }
 
 body {
@@ -12133,6 +12138,7 @@ body a.nav_elm {
 }
 body button, body a {
   border: none;
+  font-size: 0.8em;
 }
 body button.btn, body a.btn {
   border: 1px solid;
@@ -12815,6 +12821,58 @@ input[type=search]::-webkit-search-results-decoration {
     transition: 0.5s;
   }
   .banner .container:hover .row {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+.footer {
+  background-color: #000;
+}
+.footer .container {
+  padding: 10%;
+}
+.footer .container p, .footer .container a, .footer .container span {
+  color: #F5F0EC;
+}
+.footer .container p {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.footer .container a.btn {
+  border: none;
+  background-color: #1B5B31;
+  color: #F5F0EC;
+}
+.footer .container .links a {
+  display: inline-block;
+  margin: 0 2% 3% 0;
+}
+.footer .container .top {
+  border-bottom: 1px solid #F5F0EC;
+  margin-bottom: 10%;
+  padding-bottom: 10%;
+}
+
+@media (min-width: 992px) {
+  .footer .container .contact p:nth-child(1) {
+    margin-right: 48px;
+  }
+  .footer .container .links a {
+    margin-right: 48px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .footer .container .links a:hover {
+    color: #1B5B31;
+  }
+  .footer .container .bottom {
+    margin-top: 120px;
+  }
+  .footer .container a.btn {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .footer .container a:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
