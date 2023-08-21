@@ -4,12 +4,26 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "minify-html": "html-minifier-terser src/index.html --collapse-whitespace --output=build/index.html",
+    "optimize-css": "postcss src/css/style.css --use autoprefixer cssnano postcss-pxtorem --output build/css/style.css --no-map",
+    "transpile-js": "babel src/js/main.js -o build/js/main.js --presets=@babel/preset-env",
+    "minify-js": "uglifyjs build/js/main.js --compress -o build/js/main.js",
+    "build": "npm run minify-html && npm run optimize-css && npm run transpile-js && npm run minify-js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "autoprefixer": "^10.4.15",
     "bootstrap": "^5.2.3",
-    "lightbox2": "^2.11.4"
+    "cssnano": "^6.0.1",
+    "html-minifier-terser": "^7.2.0",
+    "lightbox2": "^2.11.4",
+    "postcss": "^8.4.28",
+    "postcss-cli": "^10.1.0",
+    "postcss-pxtorem": "^6.0.0",
+    "uglify-js": "^3.17.4"
   }
 }
