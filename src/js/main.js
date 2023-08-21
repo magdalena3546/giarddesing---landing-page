@@ -1,5 +1,3 @@
-// const Masonry = require("masonry-layout");
-
 const searchBtn = document.querySelector(".searchBtn");
 const closeBtn = document.querySelector(".closeBtn");
 const menuBtn = document.querySelector(".menuBtn");
@@ -11,14 +9,14 @@ const hideProjectsBtn = document.querySelector(".hideProjectsBtn");
 const boxShow = document.querySelector(".boxShow");
 const hidePhotos = document.querySelectorAll(".hidePhoto");
 const macyContainer = document.querySelector("#macy-container");
-searchBtn.addEventListener("click", function () {
+searchBtn.addEventListener("click", () => {
   searchBox.classList.add("active");
 });
-closeBtn.addEventListener("click", function () {
+closeBtn.addEventListener("click", () => {
   searchBox.classList.remove("active");
 });
 
-menuBtn.addEventListener("click", function () {
+menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("open");
 });
 
@@ -29,13 +27,6 @@ document.addEventListener("scroll", () => {
     navigation.classList.remove("fixed");
   }
 });
-
-// window.onload = () => {
-//   const masonry = new Masonry(elm, {
-//     itemSelector: ".grid-item",
-//     gutter: 10,
-//   });
-// };
 
 const macy = Macy({
   container: "#macy-container",
@@ -48,7 +39,7 @@ const macy = Macy({
   },
 });
 
-projectsBtn.addEventListener("click", function () {
+projectsBtn.addEventListener("click", () => {
   projectsBtn.classList.add("hide");
   macyContainer.classList.add("no-after");
   hidePhotos.forEach((elm) => elm.classList.add("show"));
@@ -56,7 +47,7 @@ projectsBtn.addEventListener("click", function () {
   hideProjectsBtn.classList.remove("hide");
 });
 
-hideProjectsBtn.addEventListener("click", function () {
+hideProjectsBtn.addEventListener("click", () => {
   hideProjectsBtn.classList.add("hide");
   macyContainer.classList.remove("no-after");
   hidePhotos.forEach((elm) => elm.classList.remove("show"));
